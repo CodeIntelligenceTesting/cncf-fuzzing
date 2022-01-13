@@ -33,7 +33,7 @@ func FuzzStateApi(data []byte) int {
     // }
 	err2 := os.WriteFile("./last-input", data, 0644)
 	if err2 != nil {
-        panic(e)
+        panic(err2)
     }
 	// We do not want any log output:
 	logrus.SetLevel(logrus.PanicLevel)
